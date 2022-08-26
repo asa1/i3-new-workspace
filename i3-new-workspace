@@ -12,7 +12,7 @@ function show_help {
     echo
     echo "OPTIONS:"
     echo "    -m, --move   Move current container to the new workspace"
-    echo "    -f, -follow  Move current container to the new workspace, then jump to the new workspace"
+    echo "    -f, --follow  Move current container to the new workspace, then jump to the new workspace"
     echo "    -h, --help   Print help information"
 }
 
@@ -42,9 +42,9 @@ for i in {1..10} ; do
         "new") $msg_cmd workspace number "$i" ;;
         "move") $msg_cmd move container to workspace number "$i" ;;
         "follow")
-					$msg_cmd move container to workspace number "$i"
-					$msg_cmd workspace number "$i"
-				;;
+		$msg_cmd move container to workspace number "$i"
+		$msg_cmd workspace number "$i"
+	;;
     esac
     break
 done
